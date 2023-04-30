@@ -1,0 +1,17 @@
+<div class="body">
+  <h1>
+    <b>User group: </b><span> {{ usersService.group }}</span>
+  </h1>
+  <div class="edit-body">
+    <input type="text" placeholder="Write new group name" #inputElement />
+    <button
+      class="network"
+      (click)="
+        usersService.setNewGroupName(inputElement.value);
+        inputElement.value = ''
+      "
+    >
+      Edit
+    </button>
+  </div>
+</div>
